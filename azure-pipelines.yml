@@ -22,9 +22,9 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)'
 # Create Archive : zip file
 - task: ArchiveFiles@2
-  displayName: 'Archive $(build.artifactstagingdirectory)/target/azure-functions/hca-notification-function'
+  displayName: 'Archive $(build.artifactstagingdirectory)/target/azure-functions/$(functionAppMvnTargetFolder)'
   inputs:
-    rootFolderOrFile: '$(build.artifactstagingdirectory)/target/azure-functions/hca-notification-function'
+    rootFolderOrFile: '$(build.artifactstagingdirectory)/target/azure-functions/$(functionAppMvnTargetFolder)'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
@@ -33,7 +33,7 @@ steps:
 - task: AzureRmWebAppDeployment@4
   displayName: 'Azure App Service Deploy: javapipeline'
   inputs:
-    azureSubscription: 'b16fdb57-41f7-4fd0-9d15-98b58ff6baa7'
+    azureSubscription: '$(azureSubcriptionKey)'
     appType: functionApp
     WebAppName: hca-notification-function
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
