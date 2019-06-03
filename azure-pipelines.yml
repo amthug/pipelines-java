@@ -22,9 +22,9 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)'
 # Create Archive : zip file
 - task: ArchiveFiles@2
-  displayName: 'Archive $(build.artifactstagingdirectory)/target/azure-functions/hca-notification-function'
+  displayName: 'Archive $(build.artifactstagingdirectory)'
   inputs:
-    rootFolderOrFile: '$(build.artifactstagingdirectory)/target/azure-functions/hca-notification-function'
+    rootFolderOrFile: '$(build.artifactstagingdirectory)'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
