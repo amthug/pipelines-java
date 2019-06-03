@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/shubhank/inspire-azure-functions/extensions.csproj": {}
+  },
+  "projects": {
+    "/home/shubhank/inspire-azure-functions/extensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/shubhank/inspire-azure-functions/extensions.csproj",
+        "projectName": "extensions",
+        "projectPath": "/home/shubhank/inspire-azure-functions/extensions.csproj",
+        "packagesPath": "/home/shubhank/.nuget/packages/",
+        "outputPath": "/home/shubhank/inspire-azure-functions/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/shubhank/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Azure.Storage.Queue": {
+              "target": "Package",
+              "version": "[9.4.2, )"
+            },
+            "Microsoft.Azure.WebJobs.Extensions.Storage": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
