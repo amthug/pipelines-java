@@ -8,7 +8,7 @@ steps:
 - script: |
     echo Starting the build
     mvn package
-  displayName: 'Build with Maven'steps:
+  displayName: 'Build with Maven'
 - task: Maven@2
   displayName: 'Maven pom.xml'
   inputs:
