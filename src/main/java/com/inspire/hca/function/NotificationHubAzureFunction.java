@@ -20,7 +20,7 @@ import com.windowsazure.messaging.NotificationHubsException;
 
 public class NotificationHubAzureFunction {
 
-	@FunctionName("HCANotificationQueue")
+	@FunctionName("NotificationQueue")
 	public void functionHandler(
 			@QueueTrigger(name = "req", queueName = "hcanotificationqueue", connection = "conn") String queueItem,
 			final ExecutionContext executionContext) throws NotificationHubsException {
